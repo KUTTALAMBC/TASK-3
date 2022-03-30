@@ -1,0 +1,176 @@
+1,>For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+1(a),>FOR LOOP:
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+var resume = [
+    {
+        name : "kuttalam",
+        age  : "24",
+        contact : "12345",
+    },
+ {
+        tenth : "govt school thovalai",
+        twelve : "slb govt nagercoil",
+        graduation :"ponjesly cologe of engineering ",
+        },
+ {
+        
+        qualification : "BEcivil engineering",
+        skill : "full stack developer",
+    },
+    {
+        hobby: "reading books",
+        intrested : "developing softwere",
+    }
+    
+];
+    for (i=0; i<resume.length; i++)
+    {
+        console.log(resume[i]);
+ 
+}
+
+  //end-here
+});
+ 
+ OUTPUT:
+ 
+ Output:
+{ name: 'kuttalam', age: '24', contact: '12345' }
+{ tenth: 'govt school thovalai',
+  twelve: 'slb govt nagercoil',
+  graduation: 'ponjesly cologe of engineering ' }
+{ qualification: 'BEcivil engineering',
+  skill: 'full stack developer' }
+{ hobby: 'reading books', intrested: 'developing softwere' }
+Execution Time:
+0.078s
+Memory Used:
+10400kb
+
+1(b),> FOR OF LOOP :
+
+//(FOR LOOP AND FOR OF LOOP GIVES SAME OUT PUT)//
+for(let p of resume)
+{
+console.log(p);
+}
+
+OUTPUT:
+SAME AS FOR FOORLOOP.
+ 
+ 1(C), FOR IN LOOP :
+  
+  
+  for(let p of resume)
+  {
+  for(let q in p )
+  {
+  console.log(p[q]);
+  }
+  }
+  
+ OUTPUT:
+ ( the out put will be in the form of resultent) 
+ 
+ kuttalam
+24
+12345
+govt school thovalai
+slb govt nagercoil
+ponjesly cologe of engineering 
+BEcivil engineering
+full stack developer
+reading books
+developing softwere
+Execution Time:
+0.072s
+Memory Used:
+8320kb
+
+1(d), FOR EACH LOOP:
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+var resume = [
+  {
+        name : "kuttalam",
+        age  : "24",
+        contact : "12345",
+    },
+ {
+        tenth : "govt school thovalai",
+        twelve : "slb govt nagercoil",
+        graduation :"ponjesly cologe of engineering ",
+        },
+ {
+        
+        qualification : "BEcivil engineering",
+        skill : "full stack developer",
+    },
+{
+        hobby: "reading books",
+        intrested : "developing softwere",
+    },
+    
+];
+    resume.forEach((a)=>{
+        for(var p in a){
+            console.log(p,a[p]);
+        }
+    });
+    
+    
+    OUT PUT:
+    
+    Output:
+name kuttalam
+age 24
+contact 12345
+tenth govt school thovalai
+twelve slb govt nagercoil
+graduation ponjesly cologe of engineering 
+qualification BEcivil engineering
+skill full stack developer
+hobby reading books
+intrested developing softwere
+
+
+
+2,>  DIFFERENCE BETWEEN WINDOW ,SCREEN,AND DOCUMENTS:
+
+2(a) : WINDOW:
+     the main JavaScript object root, aka the global object in a browser, 
+     and it can also be treated as the root of the document object model. You can access it as window.
+ 2(b)  : SCREEN:
+      window.screen or just screen is a small information object about physical screen dimensions.
+ 2(c)  : DOCUMENTS:
+      window.document or just document is the main object of the potentially visible document object model/DOM.
